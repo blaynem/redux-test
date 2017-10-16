@@ -8,7 +8,6 @@ class App extends Component {
     this.props.testThis()
   }
   render() {
-  console.log(axios)
     return (
       <div>
         Testin
