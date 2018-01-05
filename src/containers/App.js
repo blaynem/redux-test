@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { testThis } from '../actions'
+
+import FormSubmit from '../components/Form.Submit';
+import UserDisplay from '../components/User.Display';
 
 class App extends Component {
-  testThis = () => {
-    this.props.testThis()
-  }
   render() {
     return (
-      <div>
-        Testin
-        <button onClick={this.testThis}>Test</button>
+      <div id="App">
+        <h1>React Redux Test</h1>
+        <FormSubmit />
+        <UserDisplay />
       </div>
     );
   }
 }
 
-export default connect(null, { testThis })(App);
+export default App;

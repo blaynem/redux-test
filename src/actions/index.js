@@ -1,6 +1,11 @@
-export function testThis() {
+import { SUBMITFORM } from '../constants'
+
+// Used to submit the form. Accepts an object with properties of firstName and lastName
+export function formSubmit({firstName, lastName}) {
   return(dispatch) => {
-    console.log("tests")
-    dispatch({ type: "Test", payload: {item: "test1"} })
+    dispatch({
+      type: SUBMITFORM,
+      payload: { firstName, lastName }
+    })
   }
 }

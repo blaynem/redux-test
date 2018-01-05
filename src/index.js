@@ -8,6 +8,8 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import reducers from './reducers';
 import registerServiceWorker from './registerServiceWorker';
 
+import './styles.css';
+
 const store = createStore(
 	reducers,
 	compose(

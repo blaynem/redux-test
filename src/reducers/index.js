@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import itemsReducer from './itemsReducer'
+import dataReducer from './dataReducer'
 
 const rootReducer = combineReducers({
-  items: itemsReducer
+  formData: dataReducer
 });
 
 export default rootReducer;
