@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  background: lightgray;
+}
+
+#App {
+  margin: 0 auto;
+  width: 1200px;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*  FORM ELEMENTS  */
+.form {
+  display: flex;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form div {
+  flex: 1;
+  margin: 10px;
+  display: flex;
+}
+
+.form div > * {
+  border: 1px solid black;
+  height: 33px;
+  padding: 5px 15px;
+}
+
+.form div input {
+  width: 100%;
+  background: inherit;
+}
+
+.form div span {
+  display: flex;
+  align-items: center;
+  border-right: none;
+  text-transform: uppercase;
+}
+
+.form .hobbies {
+  flex: 100%;
+}
+
+.form button {
+  height: 45px;
+  margin-left: 20px;
+  background: inherit;
+  text-transform: uppercase;
+}
+
+.form button:hover {
+  background: gray;
+  cursor: pointer;
+  color: white;
+}
+
+/* USER DISPLAYED NAMES */
+.user-display {
+  width: 600px;
+  margin: auto;
+}
+
+.user-display .names {
+  margin: 10px;
+}
