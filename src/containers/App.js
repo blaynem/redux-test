@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import FormSubmit from '../components/Form.Submit';
+import UserForm from '../components/User.Form';
 import UserDisplay from '../components/User.Display';
 
 class App extends Component {
@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div id="App">
         <h1>React Redux Test</h1>
-        <FormSubmit />
+        <UserForm />
         <UserDisplay />
       </div>
     );

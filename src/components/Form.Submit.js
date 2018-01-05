@@ -20,11 +20,13 @@ class FormSubmit extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const { firstName, lastName } = this.state
+
+    if ( firstName === "" || lastName === "" ) return;
     this.props.formSubmit({ firstName, lastName })
   }
   render() {
     return (
-      <form className="form" onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
         <div>
           <span>First</span>
           <input
