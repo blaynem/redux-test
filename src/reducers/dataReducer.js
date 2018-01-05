@@ -1,21 +1,8 @@
-import { SUBMITFORM } from '../constants';
+import { MESSAGE, SUBMITFORM } from '../constants';
 
 const INITIAL_STATE = {
-  loading: false,
-  data: [
-    {
-      firstName: "Dumbo",
-      lastName: "Johnson"
-    },
-    {
-      firstName: "John",
-      lastName: "Snausage"
-    },
-    {
-      firstName: "Dwayne",
-      lastName: "The Rock"
-    }
-  ]
+  message: null,
+  data: []
 }
 
 export default function dataReducer(state = INITIAL_STATE, action){
@@ -24,6 +11,12 @@ export default function dataReducer(state = INITIAL_STATE, action){
       return {
         ...state,
         data: [ ...state.data, action.payload ]
+      }
+
+    case MESSAGE:
+      return {
+        ...state,
+        message: action.payload
       }
     
     default:
