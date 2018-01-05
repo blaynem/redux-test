@@ -12,67 +12,77 @@ body {
 h1 {
   text-align: center;
   text-transform: uppercase;
+  margin: 70px 0 60px;
 }
 
 /*  FORM ELEMENTS  */
 .form {
-  display: flex;
   width: 600px;
   margin: 0 auto;
 }
 
-.form {
+form {
   display: flex;
   flex-wrap: wrap;
 }
 
-.form div {
+form div {
   flex: 1;
   margin: 10px;
   display: flex;
 }
 
-.form div > * {
+form div > * {
   border: 1px solid black;
   height: 33px;
   padding: 5px 15px;
 }
 
-.form div input {
+form div input {
   width: 100%;
   background: inherit;
 }
 
-.form div span {
+form div span {
   display: flex;
   align-items: center;
   border-right: none;
   text-transform: uppercase;
 }
 
-.form .hobbies {
+form .hobbies {
   flex: 100%;
 }
 
-.form button {
+form button {
   height: 45px;
   margin-left: 20px;
   background: inherit;
   text-transform: uppercase;
 }
 
-.form button:hover {
+form button:hover {
   background: gray;
   cursor: pointer;
   color: white;
 }
 
+/* MESSAGE TO USER */
+.message-to-user {
+  text-align: center;
+  height: 20px;
+  padding: 10px;
+}
+
+
 /* USER DISPLAYED NAMES */
 .user-display {
   width: 600px;
-  margin: auto;
+  margin: 100px auto 0;
 }
 
 .user-display .names {
-  margin: 10px;
+  margin: 0 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid black
 }
