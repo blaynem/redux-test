@@ -23,6 +23,11 @@ class FormSubmit extends Component {
 
     if ( firstName === "" || lastName === "" ) return;
     this.props.formSubmit({ firstName, lastName })
+    this.setState({
+      firstName: "",
+      lastName: "",
+      hobbies: ""
+    })
   }
   render() {
     return (
