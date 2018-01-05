@@ -1,5 +1,5 @@
 {
-  "name": "lazy-gold-app",
+  "name": "react-redux-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,6 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "npm run build && surge -p ./build --domain blaynereduxtest.surge.sh",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
