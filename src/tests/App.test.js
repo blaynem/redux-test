@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore } from 'redux';
+import { shallow } from 'enzyme';
 
 import App from '../containers/App';
+import { UserDisplay } from '../components/User.Display';
 
 import reducers from '../reducers'; 
 import dataReducer from '../reducers/dataReducer'
@@ -19,6 +21,41 @@ it('renders without crashing', () => {
 	</Provider>, div);
 });
 
+describe("UserDisplay Test", () => {
+  it("should render with no children", () => {
+    const formData = {data: []}
+    const output = shallow(
+      <UserDisplay formData={formData}/>
+    )
+    expect(output.children().length).toBe(0);
+  })
+  
+  it("should render with multiple children", () => {
+    const formData = {
+      data: [
+        {firstName:"todd", lastName:"baker"},
+        {firstName:"fred", lastName:"steves"}
+      ]
+    }
+    const output = shallow(
+      <UserDisplay formData={formData} />
+    )
+    expect(output.children().length).toBe(2)
+  })
+
+  it("should display correct names", () => {
+    const formData = {
+      data: [
+        {firstName:"todd", lastName:"baker"}
+      ]
+    }
+    const output = shallow(
+      <UserDisplay formData={formData} />
+    )
+    expect(output.text()).toEqual("todd baker")
+  })
+})
+  
 describe('reducer tests', () => {
   it('should return initial state', () => {
     expect(
