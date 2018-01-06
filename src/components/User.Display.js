@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class UserDisplay extends Component {
+export class UserDisplay extends Component {
   renderNames = () => {
     const { formData } = this.props;
 
